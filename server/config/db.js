@@ -14,13 +14,15 @@ export const connectDB = async () => {
 
   if (uri) {
     if (!cached.promise) {
-      const opts = {
-        bufferCommands: false,
+      cached.promise = mongoose.connect(uri, {
         serverSelectionTimeoutMS: 5000,
-      };
-      cached.promise = mongoose.connect(uri, opts).then((m) => {
-        console.log(`[LEO DB] Connected to MongoDB Atlas/URI: ${m.connection.host}`);
+      }).then((m) => {
+        console.log(`[LEO DB] Connected to MongoDB Atlas: ${m.connection.host}`);
         return m;
+      }).catch((err) => {
+        console.error('[LEO DB] Failed to connect to MongoDB Atlas:', err.message);
+        cached.promise = null;
+        return null;
       });
     }
     try {
@@ -35,7 +37,6 @@ export const connectDB = async () => {
 
   // If in serverless (e.g. Vercel / Lambda) or production without MONGODB_URI
   if (process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME || process.env.NODE_ENV === 'production') {
-    console.warn('[LEO DB] Running in production/serverless without MONGODB_URI configured. Please set MONGODB_URI in project environment variables.');
     return null;
   }
 
