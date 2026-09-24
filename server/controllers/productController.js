@@ -1,35 +1,41 @@
-import Product from '../models/Product.js';
-import Category from '../models/Category.js';
-import Collection from '../models/Collection.js';
-import mongoose from 'mongoose';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { fallbackProducts } from '../data/fallbackData.js';
 
-// Helper to filter fallback products in memory
-const filterFallbackProducts = (query) => {
-  let list = [...fallbackProducts];
-  if (query.keyword) {
-    const kw = query.keyword.toLowerCase();
-    list = list.filter(p => p.title.toLowerCase().includes(kw) || p.description.toLowerCase().includes(kw));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const productsFilePath = path.join(__dirname, '..', 'data', 'products.json');
+
+// Helper to safely read products from JSON file
+export const readProductsFromJson = () => {
+  try {
+    if (fs.existsSync(productsFilePath)) {
+      const data = fs.readFileSync(productsFilePath, 'utf8');
+      const parsed = JSON.parse(data);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        return parsed;
+      }
+    }
+  } catch (err) {
+    console.error('[PRODUCT JSON] Error reading products.json:', err.message);
   }
-  if (query.category) {
-    list = list.filter(p => p.categorySlug === query.category.toLowerCase() || p.categoryName?.toLowerCase() === query.category.toLowerCase());
+  return fallbackProducts;
+};
+
+// Helper to safely write products to JSON file
+export const writeProductsToJson = (products) => {
+  try {
+    const dir = path.dirname(productsFilePath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2), 'utf8');
+    return true;
+  } catch (err) {
+    console.error('[PRODUCT JSON] Error writing to products.json:', err.message);
+    return false;
   }
-  if (query.collection) {
-    list = list.filter(p => p.collectionSlug === query.collection.toLowerCase());
-  }
-  if (query.gender && query.gender !== 'All') {
-    list = list.filter(p => p.gender === query.gender || p.gender === 'Unisex');
-  }
-  if (query.isFeatured === 'true') {
-    list = list.filter(p => p.isFeatured);
-  }
-  if (query.isBestSeller === 'true') {
-    list = list.filter(p => p.isBestSeller);
-  }
-  if (query.isNewArrival === 'true') {
-    list = list.filter(p => p.isNewArrival);
-  }
-  return list;
 };
 
 // Helper to slugify
@@ -48,14 +54,7 @@ const slugify = (text) => {
 // @access  Public
 export const getProducts = async (req, res) => {
   try {
-    if (mongoose.connection.readyState !== 1) {
-      const data = filterFallbackProducts(req.query);
-      return res.json({
-        success: true,
-        data,
-        pagination: { page: 1, limit: data.length, totalPages: 1, totalItems: data.length }
-      });
-    }
+    const products = readProductsFromJson();
     const {
       keyword,
       category,
@@ -69,142 +68,157 @@ export const getProducts = async (req, res) => {
       isBestSeller,
       isNewArrival,
       inStock,
-      sort,
+      sort = 'newest',
       page = 1,
       limit = 12,
     } = req.query;
 
-    const query = { isPublished: true };
+    let filtered = products.filter(p => p.isPublished !== false);
 
     // Keyword Search
     if (keyword) {
-      query.$or = [
-        { title: { $regex: keyword, $options: 'i' } },
-        { description: { $regex: keyword, $options: 'i' } },
-        { tags: { $regex: keyword, $options: 'i' } },
-        { categoryName: { $regex: keyword, $options: 'i' } },
-        { collectionName: { $regex: keyword, $options: 'i' } },
-      ];
+      const kw = keyword.toLowerCase().trim();
+      filtered = filtered.filter(p =>
+        (p.title && p.title.toLowerCase().includes(kw)) ||
+        (p.description && p.description.toLowerCase().includes(kw)) ||
+        (p.shortDescription && p.shortDescription.toLowerCase().includes(kw)) ||
+        (p.categoryName && p.categoryName.toLowerCase().includes(kw)) ||
+        (p.collectionName && p.collectionName.toLowerCase().includes(kw)) ||
+        (p.material && p.material.toLowerCase().includes(kw)) ||
+        (p.sku && p.sku.toLowerCase().includes(kw)) ||
+        (Array.isArray(p.tags) && p.tags.some(t => t.toLowerCase().includes(kw)))
+      );
     }
 
     // Category Filter
     if (category) {
-      const catDoc = await Category.findOne({
-        $or: [{ slug: category.toLowerCase() }, { _id: category.match(/^[0-9a-fA-F]{24}$/) ? category : null }],
-      });
-      if (catDoc) {
-        query.category = catDoc._id;
-      } else {
-        query.categoryName = { $regex: category, $options: 'i' };
-      }
+      const catVal = category.toLowerCase().trim();
+      filtered = filtered.filter(p =>
+        (p.categorySlug && p.categorySlug.toLowerCase() === catVal) ||
+        (p.categoryName && p.categoryName.toLowerCase() === catVal) ||
+        p.category === category
+      );
     }
 
     // Collection Filter
     if (collection) {
-      const colDoc = await Collection.findOne({
-        $or: [{ slug: collection.toLowerCase() }, { _id: collection.match(/^[0-9a-fA-F]{24}$/) ? collection : null }],
-      });
-      if (colDoc) {
-        query.collectionRef = colDoc._id;
-      } else {
-        query.collectionName = { $regex: collection, $options: 'i' };
-      }
+      const colVal = collection.toLowerCase().trim();
+      filtered = filtered.filter(p =>
+        (p.collectionSlug && p.collectionSlug.toLowerCase() === colVal) ||
+        (p.collectionName && p.collectionName.toLowerCase() === colVal) ||
+        p.collectionRef === collection
+      );
     }
 
     // Gender Filter
-    if (gender && ['Men', 'Women', 'Unisex'].includes(gender)) {
-      query.gender = { $in: [gender, 'Unisex'] };
+    if (gender && gender !== 'All') {
+      filtered = filtered.filter(p => p.gender === gender || p.gender === 'Unisex');
     }
 
     // Price Range Filter
-    if (minPrice !== undefined || maxPrice !== undefined) {
-      query.price = {};
-      if (minPrice !== undefined && minPrice !== '') query.price.$gte = Number(minPrice);
-      if (maxPrice !== undefined && maxPrice !== '') query.price.$lte = Number(maxPrice);
+    if (minPrice !== undefined && minPrice !== '') {
+      filtered = filtered.filter(p => p.price >= Number(minPrice));
+    }
+    if (maxPrice !== undefined && maxPrice !== '') {
+      filtered = filtered.filter(p => p.price <= Number(maxPrice));
     }
 
     // Size Filter
     if (size) {
-      const sizesArr = Array.isArray(size) ? size : size.split(',');
-      query.sizes = { $in: sizesArr };
+      const sizesArr = Array.isArray(size) ? size : size.split(',').map(s => s.trim());
+      filtered = filtered.filter(p =>
+        (Array.isArray(p.sizes) && p.sizes.some(s => sizesArr.includes(s))) ||
+        (Array.isArray(p.variants) && p.variants.some(v => sizesArr.includes(v.size)))
+      );
     }
 
     // Color Filter
     if (color) {
-      const colorsArr = Array.isArray(color) ? color : color.split(',');
-      query['colors.name'] = { $in: colorsArr.map(c => new RegExp(c, 'i')) };
+      const colorsArr = Array.isArray(color) ? color : color.split(',').map(c => c.trim().toLowerCase());
+      filtered = filtered.filter(p =>
+        (Array.isArray(p.colors) && p.colors.some(c => colorsArr.includes(c.name.toLowerCase()))) ||
+        (Array.isArray(p.variants) && p.variants.some(v => colorsArr.includes(v.color?.toLowerCase())))
+      );
     }
 
-    // Flags
-    if (isFeatured === 'true') query.isFeatured = true;
-    if (isBestSeller === 'true') query.isBestSeller = true;
-    if (isNewArrival === 'true') query.isNewArrival = true;
-    if (inStock === 'true') query.inStock = true;
+    // Status Flags
+    if (isFeatured === 'true') {
+      filtered = filtered.filter(p => Boolean(p.isFeatured));
+    }
+    if (isBestSeller === 'true') {
+      filtered = filtered.filter(p => Boolean(p.isBestSeller));
+    }
+    if (isNewArrival === 'true') {
+      filtered = filtered.filter(p => Boolean(p.isNewArrival));
+    }
+    if (inStock === 'true') {
+      filtered = filtered.filter(p => p.inStock !== false);
+    }
 
     // Sorting
-    let sortOptions = { createdAt: -1 }; // default newest
-    if (sort === 'price-low-high') sortOptions = { price: 1 };
-    else if (sort === 'price-high-low') sortOptions = { price: -1 };
-    else if (sort === 'bestselling') sortOptions = { isBestSeller: -1, rating: -1 };
-    else if (sort === 'rating') sortOptions = { rating: -1 };
-    else if (sort === 'featured') sortOptions = { isFeatured: -1, createdAt: -1 };
-    else if (sort === 'newest') sortOptions = { createdAt: -1 };
+    switch (sort) {
+      case 'price-low-high':
+        filtered.sort((a, b) => a.price - b.price);
+        break;
+      case 'price-high-low':
+        filtered.sort((a, b) => b.price - a.price);
+        break;
+      case 'rating':
+        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        break;
+      case 'featured':
+        filtered.sort((a, b) => (b.isFeatured ? 1 : 0) - (a.isFeatured ? 1 : 0));
+        break;
+      case 'bestselling':
+        filtered.sort((a, b) => (b.isBestSeller ? 1 : 0) - (a.isBestSeller ? 1 : 0));
+        break;
+      case 'newest':
+      default:
+        filtered.sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
+        break;
+    }
 
-    const pageNum = Number(page);
-    const limitNum = Number(limit);
-    const skip = (pageNum - 1) * limitNum;
-
-    const total = await Product.countDocuments(query);
-    const products = await Product.find(query)
-      .populate('category', 'name slug')
-      .populate('collectionRef', 'name slug')
-      .sort(sortOptions)
-      .skip(skip)
-      .limit(limitNum);
+    // Pagination
+    const totalItems = filtered.length;
+    const pageNum = Math.max(1, Number(page) || 1);
+    const limitNum = Math.max(1, Number(limit) || 12);
+    const totalPages = Math.ceil(totalItems / limitNum) || 1;
+    const startIndex = (pageNum - 1) * limitNum;
+    const paginatedProducts = filtered.slice(startIndex, startIndex + limitNum);
 
     res.json({
       success: true,
-      data: products && products.length > 0 ? products : filterFallbackProducts(req.query),
+      count: paginatedProducts.length,
       pagination: {
         page: pageNum,
         limit: limitNum,
-        totalPages: Math.ceil(total / limitNum) || 1,
-        totalItems: total || fallbackProducts.length,
+        totalPages,
+        totalItems,
       },
+      data: paginatedProducts,
     });
   } catch (error) {
-    console.warn('[PRODUCT API] Using fallback products:', error.message);
-    const data = filterFallbackProducts(req.query);
-    res.json({
-      success: true,
-      data,
-      pagination: { page: 1, limit: data.length, totalPages: 1, totalItems: data.length }
-    });
+    console.error('[PRODUCT JSON GET ERROR]:', error.message);
+    res.status(500).json({ success: false, message: error.message });
   }
 };
 
-// @desc    Get single product by slug or id
+// @desc    Get single product by slug, id, or SKU
 // @route   GET /api/products/:slugOrId
 // @access  Public
 export const getProductBySlug = async (req, res) => {
   try {
+    const products = readProductsFromJson();
     const { slugOrId } = req.params;
-    const isId = slugOrId.match(/^[0-9a-fA-F]{24}$/);
+    const target = slugOrId.toLowerCase().trim();
 
-    if (mongoose.connection.readyState !== 1) {
-      const fallback = fallbackProducts.find(p => p.slug === slugOrId.toLowerCase() || p._id === slugOrId);
-      if (!fallback) return res.status(404).json({ success: false, message: 'Product not found' });
-      return res.json({ success: true, data: fallback });
-    }
-
-    const query = isId ? { _id: slugOrId } : { slug: slugOrId.toLowerCase() };
-    const product = await Product.findOne(query)
-      .populate('category', 'name slug bannerImage')
-      .populate('collectionRef', 'name slug tagline heroImage');
+    const product = products.find(p =>
+      (p.slug && p.slug.toLowerCase() === target) ||
+      (p._id && p._id.toLowerCase() === target) ||
+      (p.sku && p.sku.toLowerCase() === target)
+    );
 
     if (!product) {
-      const fallback = fallbackProducts.find(p => p.slug === slugOrId.toLowerCase() || p._id === slugOrId);
-      if (fallback) return res.json({ success: true, data: fallback });
       return res.status(404).json({ success: false, message: 'Product not found' });
     }
 
@@ -213,8 +227,6 @@ export const getProductBySlug = async (req, res) => {
       data: product,
     });
   } catch (error) {
-    const fallback = fallbackProducts.find(p => p.slug === req.params.slugOrId?.toLowerCase() || p._id === req.params.slugOrId);
-    if (fallback) return res.json({ success: true, data: fallback });
     res.status(500).json({ success: false, message: error.message });
   }
 };
@@ -224,22 +236,25 @@ export const getProductBySlug = async (req, res) => {
 // @access  Public
 export const getRelatedProducts = async (req, res) => {
   try {
-    const product = await Product.findById(req.params.id);
-    if (!product) {
+    const products = readProductsFromJson();
+    const current = products.find(p => p._id === req.params.id || p.slug === req.params.id);
+
+    if (!current) {
       return res.status(404).json({ success: false, message: 'Product not found' });
     }
 
-    const related = await Product.find({
-      _id: { $ne: product._id },
-      isPublished: true,
-      $or: [
-        { category: product.category },
-        { collectionRef: product.collectionRef },
-        { gender: product.gender },
-      ],
-    })
-      .limit(4)
-      .populate('category', 'name slug');
+    const related = products
+      .filter(p =>
+        p._id !== current._id &&
+        p.isPublished !== false &&
+        (
+          p.categorySlug === current.categorySlug ||
+          p.category === current.category ||
+          p.collectionSlug === current.collectionSlug ||
+          p.gender === current.gender
+        )
+      )
+      .slice(0, 4);
 
     res.json({
       success: true,
@@ -255,6 +270,7 @@ export const getRelatedProducts = async (req, res) => {
 // @access  Private/Admin
 export const createProduct = async (req, res) => {
   try {
+    const products = readProductsFromJson();
     const {
       title,
       price,
@@ -262,7 +278,11 @@ export const createProduct = async (req, res) => {
       description,
       shortDescription,
       category,
+      categoryName,
+      categorySlug,
       collectionRef,
+      collectionName,
+      collectionSlug,
       gender,
       sizes,
       colors,
@@ -279,56 +299,56 @@ export const createProduct = async (req, res) => {
       isPublished,
     } = req.body;
 
-    const baseSlug = slugify(title);
+    const baseSlug = slugify(title || 'luxury-piece');
     let slug = baseSlug;
     let counter = 1;
-    while (await Product.findOne({ slug })) {
+    while (products.some(p => p.slug === slug)) {
       slug = `${baseSlug}-${counter}`;
       counter++;
     }
 
-    const categoryDoc = await Category.findById(category);
-    const collectionDoc = collectionRef ? await Collection.findById(collectionRef) : null;
-
-    const product = new Product({
-      title,
+    const newProduct = {
+      _id: `prod-${Date.now()}`,
+      title: title || 'New Luxury Piece',
       slug,
-      sku: sku || `VEL-${Date.now().toString().slice(-6)}`,
-      price,
-      compareAtPrice: compareAtPrice || 0,
-      description,
+      sku: sku || `LEO-${Date.now().toString().slice(-6)}`,
+      price: Number(price) || 0,
+      compareAtPrice: Number(compareAtPrice) || 0,
+      description: description || '',
       shortDescription: shortDescription || '',
-      category,
-      categoryName: categoryDoc ? categoryDoc.name : '',
+      category: category || 'cat-001',
+      categoryName: categoryName || 'Outerwear',
+      categorySlug: categorySlug || 'outerwear',
       collectionRef: collectionRef || null,
-      collectionName: collectionDoc ? collectionDoc.name : '',
+      collectionName: collectionName || '',
+      collectionSlug: collectionSlug || '',
       gender: gender || 'Unisex',
       sizes: sizes || ['S', 'M', 'L', 'XL'],
       colors: colors || [{ name: 'Noir Black', hex: '#0A0A0A' }],
       images: images || [],
       variants: variants || [],
-      material: material || '100% Premium Organic Cotton',
-      careInstructions: careInstructions || 'Delicate wash cold or dry clean',
+      material: material || '100% Italian Luxury Fabric',
+      careInstructions: careInstructions || 'Specialist dry clean only.',
       features: features || [],
       tags: tags || [],
-      isFeatured: isFeatured || false,
-      isBestSeller: isBestSeller || false,
-      isNewArrival: isNewArrival !== undefined ? isNewArrival : true,
-      isPublished: isPublished !== undefined ? isPublished : true,
-    });
+      isFeatured: Boolean(isFeatured),
+      isBestSeller: Boolean(isBestSeller),
+      isNewArrival: isNewArrival !== undefined ? Boolean(isNewArrival) : true,
+      isPublished: isPublished !== undefined ? Boolean(isPublished) : true,
+      inStock: true,
+      rating: 5.0,
+      numReviews: 0,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
 
-    const saved = await product.save();
-
-    // Increment category itemCount
-    if (categoryDoc) {
-      categoryDoc.itemCount += 1;
-      await categoryDoc.save();
-    }
+    products.unshift(newProduct);
+    writeProductsToJson(products);
 
     res.status(201).json({
       success: true,
       message: 'Product created successfully',
-      data: saved,
+      data: newProduct,
     });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
@@ -340,54 +360,43 @@ export const createProduct = async (req, res) => {
 // @access  Private/Admin
 export const updateProduct = async (req, res) => {
   try {
-    const product = await Product.findById(req.params.id);
-    if (!product) {
+    const products = readProductsFromJson();
+    const index = products.findIndex(p => p._id === req.params.id || p.slug === req.params.id);
+
+    if (index === -1) {
       return res.status(404).json({ success: false, message: 'Product not found' });
     }
 
-    if (req.body.title && req.body.title !== product.title) {
-      product.title = req.body.title;
-      product.slug = slugify(req.body.title);
-    }
+    const current = products[index];
 
-    if (req.body.category && req.body.category !== product.category?.toString()) {
-      const catDoc = await Category.findById(req.body.category);
-      if (catDoc) {
-        product.category = catDoc._id;
-        product.categoryName = catDoc.name;
-      }
-    }
-
-    if (req.body.collectionRef !== undefined) {
-      if (req.body.collectionRef) {
-        const colDoc = await Collection.findById(req.body.collectionRef);
-        product.collectionRef = colDoc ? colDoc._id : null;
-        product.collectionName = colDoc ? colDoc.name : '';
-      } else {
-        product.collectionRef = null;
-        product.collectionName = '';
-      }
+    if (req.body.title && req.body.title !== current.title) {
+      current.title = req.body.title;
+      current.slug = slugify(req.body.title);
     }
 
     const fields = [
       'price', 'compareAtPrice', 'description', 'shortDescription',
+      'category', 'categoryName', 'categorySlug',
+      'collectionRef', 'collectionName', 'collectionSlug',
       'gender', 'sizes', 'colors', 'images', 'variants', 'sku',
       'material', 'careInstructions', 'features', 'tags',
-      'isFeatured', 'isBestSeller', 'isNewArrival', 'isPublished'
+      'isFeatured', 'isBestSeller', 'isNewArrival', 'isPublished', 'inStock'
     ];
 
     fields.forEach(field => {
       if (req.body[field] !== undefined) {
-        product[field] = req.body[field];
+        current[field] = req.body[field];
       }
     });
 
-    const updated = await product.save();
+    current.updatedAt = new Date().toISOString();
+    products[index] = current;
+    writeProductsToJson(products);
 
     res.json({
       success: true,
       message: 'Product updated successfully',
-      data: updated,
+      data: current,
     });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
@@ -399,17 +408,15 @@ export const updateProduct = async (req, res) => {
 // @access  Private/Admin
 export const deleteProduct = async (req, res) => {
   try {
-    const product = await Product.findById(req.params.id);
-    if (!product) {
+    let products = readProductsFromJson();
+    const initialLen = products.length;
+    products = products.filter(p => p._id !== req.params.id && p.slug !== req.params.id);
+
+    if (products.length === initialLen) {
       return res.status(404).json({ success: false, message: 'Product not found' });
     }
 
-    await Product.findByIdAndDelete(req.params.id);
-
-    // Decrement category item count
-    if (product.category) {
-      await Category.findByIdAndUpdate(product.category, { $inc: { itemCount: -1 } });
-    }
+    writeProductsToJson(products);
 
     res.json({
       success: true,
@@ -425,16 +432,25 @@ export const deleteProduct = async (req, res) => {
 // @access  Private/Admin
 export const updateInventory = async (req, res) => {
   try {
-    const { variants } = req.body; // Array of { size, color, stock }
-    const product = await Product.findById(req.params.id);
-    if (!product) {
+    const { variants } = req.body;
+    const products = readProductsFromJson();
+    const index = products.findIndex(p => p._id === req.params.id || p.slug === req.params.id);
+
+    if (index === -1) {
       return res.status(404).json({ success: false, message: 'Product not found' });
     }
 
+    const product = products[index];
     if (variants && Array.isArray(variants)) {
       product.variants = variants;
-      await product.save();
+      const totalStock = variants.reduce((acc, v) => acc + (Number(v.stock) || 0), 0);
+      product.totalStock = totalStock;
+      product.inStock = totalStock > 0;
     }
+
+    product.updatedAt = new Date().toISOString();
+    products[index] = product;
+    writeProductsToJson(products);
 
     res.json({
       success: true,

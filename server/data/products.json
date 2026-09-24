@@ -1,0 +1,2631 @@
+[
+  {
+    "_id": "prod-001",
+    "title": "LEO Double-Breasted Cashmere Overcoat",
+    "slug": "leo-double-breasted-cashmere-overcoat",
+    "sku": "LEO-COAT-001",
+    "shortDescription": "Substantial 100% double-faced cashmere overcoat with peak lapels and horn buttons.",
+    "description": "Tailored from heavy 650gsm Italian double-faced cashmere, this coat features an imposing drop shoulder, hand-stitched pick detailing along the peak lapels, and genuine horn buttons. Designed to be worn over tailoring or fluid knitwear for an effortless statement.",
+    "price": 18999,
+    "compareAtPrice": 24999,
+    "category": "cat-001",
+    "categoryName": "Outerwear",
+    "categorySlug": "outerwear",
+    "collectionRef": "col-001",
+    "collectionName": "Autumn / Winter 2026 — Monolith",
+    "collectionSlug": "monolith-aw26",
+    "gender": "Unisex",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1600&q=95"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=95"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Obsidian Black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Camel Tan",
+        "hex": "#C19A6B"
+      },
+      {
+        "name": "Charcoal Grey",
+        "hex": "#36454F"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Obsidian Black",
+        "stock": 8
+      },
+      {
+        "size": "M",
+        "color": "Obsidian Black",
+        "stock": 15
+      },
+      {
+        "size": "L",
+        "color": "Obsidian Black",
+        "stock": 12
+      },
+      {
+        "size": "XL",
+        "color": "Obsidian Black",
+        "stock": 6
+      },
+      {
+        "size": "M",
+        "color": "Camel Tan",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "Camel Tan",
+        "stock": 8
+      }
+    ],
+    "material": "100% Italian Double-Faced Cashmere",
+    "careInstructions": "Specialist dry clean only. Store on wide wooden hanger.",
+    "features": [
+      "Hand-finished pick stitching",
+      "Real buffalo horn buttons",
+      "Silk cupro interior lining",
+      "Deep welt hand pockets"
+    ],
+    "tags": [
+      "Overcoat",
+      "Cashmere",
+      "AW26",
+      "Luxury Outerwear"
+    ],
+    "isFeatured": true,
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.9,
+    "numReviews": 18,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.982Z",
+    "updatedAt": "2026-09-24T12:43:09.986Z"
+  },
+  {
+    "_id": "prod-002",
+    "title": "LEO Minimalist Lambskin Leather Bomber",
+    "slug": "leo-minimalist-lambskin-leather-bomber",
+    "sku": "LEO-LTHR-002",
+    "shortDescription": "Buttery full-grain lambskin bomber with brushed palladium two-way zipper.",
+    "description": "Crafted from supple French lambskin that develops a bespoke patina over time. Cut with a relaxed boxy drape, ribbed cashmere trims, and a clean concealed placket.",
+    "price": 22499,
+    "compareAtPrice": 28999,
+    "category": "cat-001",
+    "categoryName": "Outerwear",
+    "categorySlug": "outerwear",
+    "collectionRef": "col-003",
+    "collectionName": "Minimalist Noir",
+    "collectionSlug": "minimalist-noir",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1600&q=95"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Noir Black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Espresso Brown",
+        "hex": "#3D2817"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Noir Black",
+        "stock": 5
+      },
+      {
+        "size": "M",
+        "color": "Noir Black",
+        "stock": 9
+      },
+      {
+        "size": "L",
+        "color": "Noir Black",
+        "stock": 14
+      },
+      {
+        "size": "XL",
+        "color": "Noir Black",
+        "stock": 4
+      }
+    ],
+    "material": "100% French Full-Grain Lambskin Leather",
+    "careInstructions": "Specialist leather clean only.",
+    "features": [
+      "Two-way brushed palladium zipper",
+      "Interior welt passport pocket",
+      "Ribbed cashmere cuff & hem"
+    ],
+    "tags": [
+      "Leather Jacket",
+      "Bomber",
+      "Noir",
+      "Luxury"
+    ],
+    "isFeatured": true,
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "inStock": true,
+    "rating": 5,
+    "numReviews": 24,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.986Z",
+    "updatedAt": "2026-09-24T12:43:09.986Z"
+  },
+  {
+    "_id": "prod-003",
+    "title": "LEO Structured Wool Trench Coat",
+    "slug": "leo-structured-wool-trench-coat",
+    "sku": "LEO-TRNCH-003",
+    "shortDescription": "Modern reimagining of the classic military trench in water-resistant wool gabardine.",
+    "description": "Featuring storm flaps, an adjustable waist sash with matte gold D-rings, and an ankle-grazing silhouette that lends theatrical elegance to any stride.",
+    "price": 16999,
+    "compareAtPrice": 21999,
+    "category": "cat-001",
+    "categoryName": "Outerwear",
+    "categorySlug": "outerwear",
+    "collectionRef": "col-001",
+    "collectionName": "Autumn / Winter 2026 — Monolith",
+    "collectionSlug": "monolith-aw26",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=95"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Camel Sand",
+        "hex": "#C19A6B"
+      },
+      {
+        "name": "Midnight Black",
+        "hex": "#0A0A0A"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Camel Sand",
+        "stock": 6
+      },
+      {
+        "size": "M",
+        "color": "Camel Sand",
+        "stock": 12
+      },
+      {
+        "size": "L",
+        "color": "Camel Sand",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "Camel Sand",
+        "stock": 5
+      }
+    ],
+    "material": "100% Virgin Wool Gabardine",
+    "careInstructions": "Dry clean only.",
+    "features": [
+      "Water-repellent finish",
+      "Detachable waist belt",
+      "Deep rear storm flap"
+    ],
+    "tags": [
+      "Trench",
+      "Wool",
+      "Editorial",
+      "Menswear Outerwear"
+    ],
+    "isFeatured": true,
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.8,
+    "numReviews": 12,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.986Z",
+    "updatedAt": "2026-09-24T12:43:09.986Z"
+  },
+  {
+    "_id": "prod-004",
+    "title": "LEO Oversized Quilted Down Parka",
+    "slug": "leo-oversized-quilted-down-parka",
+    "sku": "LEO-DOWN-004",
+    "shortDescription": "Cocoon silhouette insulated with 800-fill goose down for extreme warmth.",
+    "description": "Constructed with a matte micro-ripstop shell and lined in thermal satin. Magnetic front closure with an exaggerated stand collar that completely blocks chilly winds.",
+    "price": 14999,
+    "compareAtPrice": 19999,
+    "category": "cat-001",
+    "categoryName": "Outerwear",
+    "categorySlug": "outerwear",
+    "collectionRef": "col-001",
+    "collectionName": "Autumn / Winter 2026 — Monolith",
+    "collectionSlug": "monolith-aw26",
+    "gender": "Unisex",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Onyx Black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Slate Grey",
+        "hex": "#708090"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Onyx Black",
+        "stock": 7
+      },
+      {
+        "size": "M",
+        "color": "Onyx Black",
+        "stock": 11
+      },
+      {
+        "size": "L",
+        "color": "Onyx Black",
+        "stock": 8
+      }
+    ],
+    "material": "800-Fill Ethically Sourced Goose Down, Japanese Micro-Ripstop",
+    "careInstructions": "Machine wash delicate, tumble dry with tennis balls.",
+    "features": [
+      "Thermal fleece-lined pockets",
+      "Concealed magnetic placket",
+      "Drawcord hem"
+    ],
+    "tags": [
+      "Down Parka",
+      "Winter Jacket",
+      "Warmth"
+    ],
+    "isFeatured": false,
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "inStock": true,
+    "rating": 4.9,
+    "numReviews": 15,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.987Z",
+    "updatedAt": "2026-09-24T12:43:09.987Z"
+  },
+  {
+    "_id": "prod-005",
+    "title": "LEO Pure Mulberry Silk Fluid Shirt",
+    "slug": "leo-pure-mulberry-silk-fluid-shirt",
+    "sku": "LEO-SHRT-005",
+    "shortDescription": "100% 22-momme Mulberry silk draped shirt with mother-of-pearl buttons.",
+    "description": "Cut with a flowing relaxed silhouette, this silk shirt cascades effortlessly across the body. Features a clean Cuban collar, French seams, and genuine Australian mother-of-pearl buttons.",
+    "price": 8999,
+    "compareAtPrice": 11999,
+    "category": "cat-002",
+    "categoryName": "Tailored Shirts",
+    "categorySlug": "tailored-shirts",
+    "collectionRef": "col-004",
+    "collectionName": "The Silk Edit",
+    "collectionSlug": "the-silk-edit",
+    "gender": "Unisex",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=1600&q=95"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Champagne Ivory",
+        "hex": "#F7F5F0"
+      },
+      {
+        "name": "Midnight Obsidian",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Olive Bronze",
+        "hex": "#556B2F"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Champagne Ivory",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "Champagne Ivory",
+        "stock": 18
+      },
+      {
+        "size": "L",
+        "color": "Champagne Ivory",
+        "stock": 14
+      },
+      {
+        "size": "M",
+        "color": "Midnight Obsidian",
+        "stock": 12
+      }
+    ],
+    "material": "100% Grade 6A 22-Momme Mulberry Silk",
+    "careInstructions": "Hand wash cold with silk detergent or dry clean.",
+    "features": [
+      "Natural mother-of-pearl buttons",
+      "French interior seams",
+      "Curved high-low hemline"
+    ],
+    "tags": [
+      "Silk Shirt",
+      "Luxury Essentials",
+      "Silk Edit"
+    ],
+    "isFeatured": true,
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 5,
+    "numReviews": 31,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.987Z",
+    "updatedAt": "2026-09-24T12:43:09.987Z"
+  },
+  {
+    "_id": "prod-006",
+    "title": "LEO Structured Poplin Formal Shirt",
+    "slug": "leo-structured-poplin-formal-shirt",
+    "sku": "LEO-SHRT-006",
+    "shortDescription": "120s two-ply organic Egyptian cotton poplin with crisp architectural cuffs.",
+    "description": "Engineered for a razor-sharp profile. Features extended cuffs designed to be worn loose or turned back, an elongated back yoke, and high side slits.",
+    "price": 5499,
+    "compareAtPrice": 6999,
+    "category": "cat-002",
+    "categoryName": "Tailored Shirts",
+    "categorySlug": "tailored-shirts",
+    "collectionRef": "col-001",
+    "collectionName": "Autumn / Winter 2026 — Monolith",
+    "collectionSlug": "monolith-aw26",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=1600&q=95"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Optic White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Pale Sky Blue",
+        "hex": "#E0E8F0"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Optic White",
+        "stock": 15
+      },
+      {
+        "size": "M",
+        "color": "Optic White",
+        "stock": 16
+      },
+      {
+        "size": "L",
+        "color": "Optic White",
+        "stock": 9
+      },
+      {
+        "size": "XL",
+        "color": "Optic White",
+        "stock": 5
+      }
+    ],
+    "material": "100% GOTS Certified Organic Egyptian Cotton Poplin",
+    "careInstructions": "Machine wash cold delicate. Warm iron while damp.",
+    "features": [
+      "120s 2-ply high-density weave",
+      "Extended barrel cuffs",
+      "Side split hem with reinforcement gussets"
+    ],
+    "tags": [
+      "Poplin Shirt",
+      "White Shirt",
+      "Architectural"
+    ],
+    "isFeatured": true,
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.8,
+    "numReviews": 14,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.987Z",
+    "updatedAt": "2026-09-24T12:43:09.987Z"
+  },
+  {
+    "_id": "prod-007",
+    "title": "LEO Relaxed Mediterranean Linen Shirt",
+    "slug": "leo-relaxed-mediterranean-linen-shirt",
+    "sku": "LEO-SHRT-007",
+    "shortDescription": "Pre-washed French flax linen with relaxed band collar and casual drape.",
+    "description": "Spun from artisanal Normandy flax linen that breathes effortlessly in heat. Garment-dyed for subtle tonal variation and washed for lived-in softness from the very first wear.",
+    "price": 4999,
+    "compareAtPrice": 5999,
+    "category": "cat-002",
+    "categoryName": "Tailored Shirts",
+    "categorySlug": "tailored-shirts",
+    "collectionRef": "col-002",
+    "collectionName": "Spring / Summer 2026 — Aura",
+    "collectionSlug": "aura-ss26",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=1600&q=95"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      {
+        "name": "Sand Beige",
+        "hex": "#D2B48C"
+      },
+      {
+        "name": "Sage Green",
+        "hex": "#8A9A86"
+      },
+      {
+        "name": "Crisp White",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Sand Beige",
+        "stock": 12
+      },
+      {
+        "size": "M",
+        "color": "Sand Beige",
+        "stock": 20
+      },
+      {
+        "size": "L",
+        "color": "Sand Beige",
+        "stock": 18
+      },
+      {
+        "size": "XL",
+        "color": "Sand Beige",
+        "stock": 10
+      }
+    ],
+    "material": "100% Normandy Pre-Washed Flax Linen",
+    "careInstructions": "Machine wash gentle. Line dry in shade.",
+    "features": [
+      "Mandarin band collar",
+      "Breathable open weave",
+      "Natural coconut buttons"
+    ],
+    "tags": [
+      "Linen Shirt",
+      "Summer",
+      "Relaxed",
+      "Aura"
+    ],
+    "isFeatured": false,
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "inStock": true,
+    "rating": 4.7,
+    "numReviews": 22,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.987Z",
+    "updatedAt": "2026-09-24T12:43:09.987Z"
+  },
+  {
+    "_id": "prod-008",
+    "title": "LEO Tailored Evening Tuxedo Shirt",
+    "slug": "leo-tailored-evening-tuxedo-shirt",
+    "sku": "LEO-SHRT-008",
+    "shortDescription": "Marcella bib front evening shirt with concealed placket and double French cuffs.",
+    "description": "The pinnacle of black-tie craftsmanship. Hand-woven pique bib front, structured wing collar, and seamless double cuffs designed for cufflinks.",
+    "price": 7499,
+    "compareAtPrice": 9499,
+    "category": "cat-002",
+    "categoryName": "Tailored Shirts",
+    "categorySlug": "tailored-shirts",
+    "collectionRef": "col-003",
+    "collectionName": "Minimalist Noir",
+    "collectionSlug": "minimalist-noir",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Pure White",
+        "stock": 6
+      },
+      {
+        "size": "M",
+        "color": "Pure White",
+        "stock": 14
+      },
+      {
+        "size": "L",
+        "color": "Pure White",
+        "stock": 12
+      },
+      {
+        "size": "XL",
+        "color": "Pure White",
+        "stock": 5
+      }
+    ],
+    "material": "100% Sea Island Long-Staple Cotton",
+    "careInstructions": "Professional dry clean & press.",
+    "features": [
+      "Waffle Marcella bib",
+      "Double French cuffs",
+      "Removable collar stays"
+    ],
+    "tags": [
+      "Tuxedo",
+      "Black Tie",
+      "Formal Shirt"
+    ],
+    "isFeatured": false,
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.9,
+    "numReviews": 9,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.987Z",
+    "updatedAt": "2026-09-24T12:43:09.987Z"
+  },
+  {
+    "_id": "prod-009",
+    "title": "LEO Double-Pleated Wide-Leg Trousers",
+    "slug": "leo-double-pleated-wide-leg-trousers",
+    "sku": "LEO-TRSR-009",
+    "shortDescription": "High-waisted wide-leg tailored trousers in lightweight tropical wool.",
+    "description": "Cut with deep double forward pleats that create an effortless, dramatic sweep when walking. Featuring side adjusters for a bespoke fit without belt loops, and an unfinished hem for customized tailoring.",
+    "price": 7999,
+    "compareAtPrice": 9999,
+    "category": "cat-003",
+    "categoryName": "Trousers",
+    "categorySlug": "trousers",
+    "collectionRef": "col-001",
+    "collectionName": "Autumn / Winter 2026 — Monolith",
+    "collectionSlug": "monolith-aw26",
+    "gender": "Unisex",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=95"
+      }
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "colors": [
+      {
+        "name": "Charcoal Wool",
+        "hex": "#2A2A2A"
+      },
+      {
+        "name": "Oatmeal Taupe",
+        "hex": "#C2B69D"
+      },
+      {
+        "name": "Deep Navy",
+        "hex": "#0B132B"
+      }
+    ],
+    "variants": [
+      {
+        "size": "30",
+        "color": "Charcoal Wool",
+        "stock": 14
+      },
+      {
+        "size": "32",
+        "color": "Charcoal Wool",
+        "stock": 18
+      },
+      {
+        "size": "34",
+        "color": "Charcoal Wool",
+        "stock": 12
+      },
+      {
+        "size": "32",
+        "color": "Oatmeal Taupe",
+        "stock": 10
+      }
+    ],
+    "material": "100% Super 130s Italian Tropical Wool",
+    "careInstructions": "Dry clean only. Press with a damp cloth.",
+    "features": [
+      "Brass side adjusters",
+      "Deep dual forward pleats",
+      "Half-lined in viscose satin",
+      "Corozo button fly"
+    ],
+    "tags": [
+      "Wide Leg",
+      "Pleated Trousers",
+      "Tailoring",
+      "High Waist"
+    ],
+    "isFeatured": true,
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.9,
+    "numReviews": 27,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.987Z",
+    "updatedAt": "2026-09-24T12:43:09.987Z"
+  },
+  {
+    "_id": "prod-010",
+    "title": "LEO Relaxed Drawstring Wool Slacks",
+    "slug": "leo-relaxed-drawstring-wool-slacks",
+    "sku": "LEO-TRSR-010",
+    "shortDescription": "Elevated casual trousers blending fine wool drape with an elasticated waistband.",
+    "description": "Bridging the divide between formal tailoring and luxury leisure. Cut with a tapered hem, internal silk-tipped drawstring, and subtle front crease.",
+    "price": 6499,
+    "compareAtPrice": 7999,
+    "category": "cat-003",
+    "categoryName": "Trousers",
+    "categorySlug": "trousers",
+    "collectionRef": "col-003",
+    "collectionName": "Minimalist Noir",
+    "collectionSlug": "minimalist-noir",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Midnight Noir",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Heather Smoke",
+        "hex": "#5A5A5A"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Midnight Noir",
+        "stock": 9
+      },
+      {
+        "size": "M",
+        "color": "Midnight Noir",
+        "stock": 16
+      },
+      {
+        "size": "L",
+        "color": "Midnight Noir",
+        "stock": 14
+      },
+      {
+        "size": "XL",
+        "color": "Midnight Noir",
+        "stock": 8
+      }
+    ],
+    "material": "98% Virgin Wool, 2% Elastane",
+    "careInstructions": "Dry clean or gentle wool hand wash.",
+    "features": [
+      "Elasticated waistband with silk drawstring",
+      "Concealed zip pockets",
+      "Tapered leg profile"
+    ],
+    "tags": [
+      "Slacks",
+      "Casual Wool",
+      "Comfort Tailoring"
+    ],
+    "isFeatured": false,
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "inStock": true,
+    "rating": 4.8,
+    "numReviews": 19,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-011",
+    "title": "LEO Tailored Slim Sartorial Wool Slacks",
+    "slug": "leo-tailored-slim-sartorial-wool-slacks",
+    "sku": "LEO-TRSR-011",
+    "shortDescription": "Ankle-length slim tailored trousers with immaculate pressed front creases.",
+    "description": "Sculpted to elongate the legs, these trousers feature a seamless waistband, extended tab closure, and discreet cuff finish in fine Biella wool.",
+    "price": 6999,
+    "compareAtPrice": 8499,
+    "category": "cat-003",
+    "categoryName": "Trousers",
+    "categorySlug": "trousers",
+    "collectionRef": "col-001",
+    "collectionName": "Autumn / Winter 2026 — Monolith",
+    "collectionSlug": "monolith-aw26",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "colors": [
+      {
+        "name": "Obsidian Black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Charcoal Grey",
+        "hex": "#36454F"
+      }
+    ],
+    "variants": [
+      {
+        "size": "30",
+        "color": "Obsidian Black",
+        "stock": 6
+      },
+      {
+        "size": "32",
+        "color": "Obsidian Black",
+        "stock": 11
+      },
+      {
+        "size": "34",
+        "color": "Obsidian Black",
+        "stock": 10
+      },
+      {
+        "size": "36",
+        "color": "Obsidian Black",
+        "stock": 5
+      }
+    ],
+    "material": "70% Wool, 28% Viscose, 2% Elastane",
+    "careInstructions": "Dry clean only.",
+    "features": [
+      "Extended tab front closure",
+      "Pressed center pleat",
+      "Discreet heel tape protection"
+    ],
+    "tags": [
+      "Sartorial Slacks",
+      "Men Tailoring",
+      "Slim Pants"
+    ],
+    "isFeatured": false,
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.7,
+    "numReviews": 8,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-012",
+    "title": "LEO Pure Mongolian Cashmere Rollneck",
+    "slug": "leo-pure-mongolian-cashmere-rollneck",
+    "sku": "LEO-KNIT-012",
+    "shortDescription": "Plush 4-ply cashmere turtleneck sweater of unparalleled warmth and lightness.",
+    "description": "Spun from the underfleece of Capra Hircus goats from the steppes of Inner Mongolia. Seamlessly knitted with a generous rollneck collar that stands without slouching.",
+    "price": 11999,
+    "compareAtPrice": 14999,
+    "category": "cat-004",
+    "categoryName": "Knitwear",
+    "categorySlug": "knitwear",
+    "collectionRef": "col-005",
+    "collectionName": "Cashmere Atelier",
+    "collectionSlug": "cashmere-atelier",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=1600&q=95"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Ecru Melange",
+        "hex": "#EAE6DF"
+      },
+      {
+        "name": "Raven Black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Espresso",
+        "hex": "#3B2F2F"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Ecru Melange",
+        "stock": 7
+      },
+      {
+        "size": "M",
+        "color": "Ecru Melange",
+        "stock": 12
+      },
+      {
+        "size": "L",
+        "color": "Ecru Melange",
+        "stock": 10
+      },
+      {
+        "size": "XL",
+        "color": "Ecru Melange",
+        "stock": 4
+      },
+      {
+        "size": "M",
+        "color": "Raven Black",
+        "stock": 15
+      }
+    ],
+    "material": "100% Grade-A 4-Ply Mongolian Cashmere (14.8 Micron)",
+    "careInstructions": "Hand wash in lukewarm water with cashmere shampoo. Dry flat on towel.",
+    "features": [
+      "Ribbed rollneck and cuffs",
+      "Zero-waste fully fashioned knit",
+      "Anti-pilling treatment"
+    ],
+    "tags": [
+      "Cashmere",
+      "Turtleneck",
+      "Rollneck",
+      "Winter Luxury"
+    ],
+    "isFeatured": true,
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 5,
+    "numReviews": 38,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-013",
+    "title": "LEO Heavy Ribbed Cashmere Shawl Cardigan",
+    "slug": "leo-heavy-ribbed-cashmere-shawl-cardigan",
+    "sku": "LEO-KNIT-013",
+    "shortDescription": "Chunky 7-gauge fisherman ribbed cardigan with genuine horn anchor buttons.",
+    "description": "A cocoon of warmth for the discerning gentleman. Heavily textured with a shawl collar, dropped shoulders, and patch hand pockets.",
+    "price": 13499,
+    "compareAtPrice": 16999,
+    "category": "cat-004",
+    "categoryName": "Knitwear",
+    "categorySlug": "knitwear",
+    "collectionRef": "col-005",
+    "collectionName": "Cashmere Atelier",
+    "collectionSlug": "cashmere-atelier",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Oatmeal",
+        "hex": "#D7C4B7"
+      },
+      {
+        "name": "Charcoal Black",
+        "hex": "#1C1C1C"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Oatmeal",
+        "stock": 5
+      },
+      {
+        "size": "M",
+        "color": "Oatmeal",
+        "stock": 9
+      },
+      {
+        "size": "L",
+        "color": "Oatmeal",
+        "stock": 11
+      },
+      {
+        "size": "XL",
+        "color": "Oatmeal",
+        "stock": 4
+      }
+    ],
+    "material": "100% 6-Ply Pure Cashmere",
+    "careInstructions": "Dry clean or hand wash flat.",
+    "features": [
+      "Real horn buttons",
+      "Oversized deep patch pockets",
+      "Chunky 7-gauge fisherman rib"
+    ],
+    "tags": [
+      "Cardigan",
+      "Knitwear",
+      "Cashmere",
+      "Menswear"
+    ],
+    "isFeatured": true,
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.9,
+    "numReviews": 16,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-014",
+    "title": "LEO Ultra-Fine Merino Wool Crewneck",
+    "slug": "leo-ultra-fine-merino-wool-crewneck",
+    "sku": "LEO-KNIT-014",
+    "shortDescription": "16-gauge Extra Fine Australian Merino wool knitted for trans-seasonal layering.",
+    "description": "Smooth as silk against bare skin. Temperature-regulating, naturally odor resistant, and tailored with a clean tubular collar.",
+    "price": 4999,
+    "compareAtPrice": 6499,
+    "category": "cat-004",
+    "categoryName": "Knitwear",
+    "categorySlug": "knitwear",
+    "collectionRef": "col-001",
+    "collectionName": "Autumn / Winter 2026 — Monolith",
+    "collectionSlug": "monolith-aw26",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Deep Forest",
+        "hex": "#1E3326"
+      },
+      {
+        "name": "Midnight Black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Bordeaux",
+        "hex": "#4C1C24"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Deep Forest",
+        "stock": 8
+      },
+      {
+        "size": "M",
+        "color": "Deep Forest",
+        "stock": 15
+      },
+      {
+        "size": "L",
+        "color": "Deep Forest",
+        "stock": 14
+      },
+      {
+        "size": "XL",
+        "color": "Deep Forest",
+        "stock": 7
+      }
+    ],
+    "material": "100% Extra Fine Australian Merino Wool (19.5 Micron)",
+    "careInstructions": "Wool cycle machine wash cold, dry flat.",
+    "features": [
+      "Seamless body construction",
+      "Ribbed collar and cuffs",
+      "Naturally breathable"
+    ],
+    "tags": [
+      "Merino Wool",
+      "Crewneck",
+      "Layering"
+    ],
+    "isFeatured": false,
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "inStock": true,
+    "rating": 4.8,
+    "numReviews": 21,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-015",
+    "title": "LEO Velvet Peak Lapel Evening Tuxedo",
+    "slug": "leo-velvet-peak-lapel-evening-tuxedo",
+    "sku": "LEO-TUX-015",
+    "shortDescription": "Black-tie tailored smoking jacket in deep Italian cotton velvet with silk grosgrain lapels.",
+    "description": "The pinnacle of sovereign evening presence. Tailored from lustrous Italian cotton velvet with structured rope shoulders, hand-padded peak lapels, and silk-covered buttons.",
+    "price": 24999,
+    "compareAtPrice": 29999,
+    "category": "cat-005",
+    "categoryName": "Eveningwear & Tuxedos",
+    "categorySlug": "eveningwear-tuxedos",
+    "collectionRef": "col-003",
+    "collectionName": "Minimalist Noir",
+    "collectionSlug": "minimalist-noir",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1600&q=95"
+      }
+    ],
+    "sizes": [
+      "38R",
+      "40R",
+      "42R",
+      "44R"
+    ],
+    "colors": [
+      {
+        "name": "Midnight Velvet",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Imperial Emerald",
+        "hex": "#0B3B24"
+      },
+      {
+        "name": "Deep Burgundy",
+        "hex": "#4A0E17"
+      }
+    ],
+    "variants": [
+      {
+        "size": "38R",
+        "color": "Midnight Velvet",
+        "stock": 5
+      },
+      {
+        "size": "40R",
+        "color": "Midnight Velvet",
+        "stock": 8
+      },
+      {
+        "size": "42R",
+        "color": "Midnight Velvet",
+        "stock": 6
+      },
+      {
+        "size": "44R",
+        "color": "Midnight Velvet",
+        "stock": 4
+      },
+      {
+        "size": "40R",
+        "color": "Imperial Emerald",
+        "stock": 5
+      },
+      {
+        "size": "42R",
+        "color": "Imperial Emerald",
+        "stock": 3
+      }
+    ],
+    "material": "100% Italian Cotton Velvet, Pure Silk Lapels",
+    "careInstructions": "Specialist dry clean only. Store in garment bag on broad cedar hanger.",
+    "features": [
+      "Hand-padded peak lapels",
+      "Silk-covered buttons",
+      "Full canvas construction",
+      "Bespoke silk cupro lining"
+    ],
+    "tags": [
+      "Tuxedo",
+      "Velvet Blazer",
+      "Black Tie",
+      "Gala Evening"
+    ],
+    "isFeatured": true,
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 5,
+    "numReviews": 29,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-016",
+    "title": "LEO Double-Breasted Wool-Silk Dinner Jacket",
+    "slug": "leo-double-breasted-wool-silk-dinner-jacket",
+    "sku": "LEO-TUX-016",
+    "shortDescription": "Six-button double-breasted formal dinner jacket with satin shawl lapels.",
+    "description": "A tribute to Golden Age high-society dressing. Cut with a tapered waist, broad sweep, and dual rear vents for timeless elegance at galas and premier galas.",
+    "price": 21499,
+    "compareAtPrice": 26999,
+    "category": "cat-005",
+    "categoryName": "Eveningwear & Tuxedos",
+    "categorySlug": "eveningwear-tuxedos",
+    "collectionRef": "col-004",
+    "collectionName": "The Silk Edit",
+    "collectionSlug": "the-silk-edit",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1598808503746-f34c53b9323e?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=95"
+      }
+    ],
+    "sizes": [
+      "38R",
+      "40R",
+      "42R",
+      "44R"
+    ],
+    "colors": [
+      {
+        "name": "Obsidian Black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Alabaster Ivory",
+        "hex": "#F7F5F0"
+      }
+    ],
+    "variants": [
+      {
+        "size": "38R",
+        "color": "Obsidian Black",
+        "stock": 4
+      },
+      {
+        "size": "40R",
+        "color": "Obsidian Black",
+        "stock": 8
+      },
+      {
+        "size": "42R",
+        "color": "Obsidian Black",
+        "stock": 6
+      },
+      {
+        "size": "44R",
+        "color": "Obsidian Black",
+        "stock": 3
+      }
+    ],
+    "material": "80% Super 150s Virgin Wool, 20% Mulberry Silk",
+    "careInstructions": "Professional dry clean only.",
+    "features": [
+      "Six-button double-breasted closure",
+      "Silk satin shawl collar",
+      "Working cuff buttonholes"
+    ],
+    "tags": [
+      "Dinner Jacket",
+      "Formal Wear",
+      "Double-Breasted",
+      "Silk Blend"
+    ],
+    "isFeatured": true,
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.9,
+    "numReviews": 11,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-017",
+    "title": "LEO Silk Jacquard Evening Smoking Robe",
+    "slug": "leo-silk-jacquard-evening-smoking-robe",
+    "sku": "LEO-TUX-017",
+    "shortDescription": "Lounge smoking coat in heavyweight silk jacquard with quilted shawl collar and tassel belt.",
+    "description": "Designed for sovereign evening retreats. Features rich tone-on-tone baroque jacquard weaving, piped cuffs, and a self-tie sash with silk fringe tassels.",
+    "price": 18999,
+    "compareAtPrice": 22999,
+    "category": "cat-005",
+    "categoryName": "Eveningwear & Tuxedos",
+    "categorySlug": "eveningwear-tuxedos",
+    "collectionRef": "col-004",
+    "collectionName": "The Silk Edit",
+    "collectionSlug": "the-silk-edit",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Imperial Onyx",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Deep Crimson",
+        "hex": "#58111A"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Imperial Onyx",
+        "stock": 6
+      },
+      {
+        "size": "M",
+        "color": "Imperial Onyx",
+        "stock": 10
+      },
+      {
+        "size": "L",
+        "color": "Imperial Onyx",
+        "stock": 8
+      },
+      {
+        "size": "XL",
+        "color": "Imperial Onyx",
+        "stock": 4
+      }
+    ],
+    "material": "100% Heavy Mulberry Silk Jacquard",
+    "careInstructions": "Specialist dry clean only.",
+    "features": [
+      "Quilted silk satin collar",
+      "Deep welt pockets",
+      "Handmade fringe sash"
+    ],
+    "tags": [
+      "Smoking Robe",
+      "Silk Jacquard",
+      "Evening Wear",
+      "Lounge Couture"
+    ],
+    "isFeatured": false,
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "inStock": true,
+    "rating": 4.8,
+    "numReviews": 17,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-018",
+    "title": "LEO Heavyweight 280GSM Oversized Tee",
+    "slug": "leo-heavyweight-280gsm-oversized-tee",
+    "sku": "LEO-TEE-018",
+    "shortDescription": "Dense 280gsm organic combed cotton with dropped shoulders and ribbed neckband.",
+    "description": "The definitive luxury t-shirt. Dense yet soft to the touch, retaining its boxy silhouette without sagging or losing shape through countless washes.",
+    "price": 2499,
+    "compareAtPrice": 3299,
+    "category": "cat-006",
+    "categoryName": "T-Shirts & Polos",
+    "categorySlug": "t-shirts-polos",
+    "collectionRef": "col-003",
+    "collectionName": "Minimalist Noir",
+    "collectionSlug": "minimalist-noir",
+    "gender": "Unisex",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=1600&q=95"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      {
+        "name": "Pitch Black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Chalk White",
+        "hex": "#F7F5F0"
+      },
+      {
+        "name": "Vintage Olive",
+        "hex": "#4B5320"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Pitch Black",
+        "stock": 25
+      },
+      {
+        "size": "M",
+        "color": "Pitch Black",
+        "stock": 40
+      },
+      {
+        "size": "L",
+        "color": "Pitch Black",
+        "stock": 35
+      },
+      {
+        "size": "XL",
+        "color": "Pitch Black",
+        "stock": 18
+      },
+      {
+        "size": "M",
+        "color": "Chalk White",
+        "stock": 30
+      },
+      {
+        "size": "L",
+        "color": "Chalk White",
+        "stock": 28
+      }
+    ],
+    "material": "100% Organic GOTS Combed Cotton (280 GSM)",
+    "careInstructions": "Machine wash cold inside out. Do not tumble dry.",
+    "features": [
+      "Thick 1.25\" bound collar",
+      "Reinforced twin-needle stitching",
+      "Pre-shrunk organic yarn"
+    ],
+    "tags": [
+      "Oversized Tee",
+      "Heavyweight Cotton",
+      "Essential",
+      "Streetwear"
+    ],
+    "isFeatured": true,
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "inStock": true,
+    "rating": 4.9,
+    "numReviews": 64,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-019",
+    "title": "LEO Mercerized Cotton Open-Collar Knit Polo",
+    "slug": "leo-mercerized-cotton-open-collar-knit-polo",
+    "sku": "LEO-POLO-019",
+    "shortDescription": "Silky mercerized cotton fine knit polo with Johnny collar and ribbed trims.",
+    "description": "Featuring a lustrous silky sheen and refined open Johnny collar. Perfect for styling under a tailored suit jacket or with pleated wide trousers.",
+    "price": 3999,
+    "compareAtPrice": 4999,
+    "category": "cat-006",
+    "categoryName": "T-Shirts & Polos",
+    "categorySlug": "t-shirts-polos",
+    "collectionRef": "col-002",
+    "collectionName": "Spring / Summer 2026 — Aura",
+    "collectionSlug": "aura-ss26",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Alabaster Beige",
+        "hex": "#E6E0D4"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#0B132B"
+      },
+      {
+        "name": "Noir",
+        "hex": "#0A0A0A"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Alabaster Beige",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "Alabaster Beige",
+        "stock": 18
+      },
+      {
+        "size": "L",
+        "color": "Alabaster Beige",
+        "stock": 14
+      },
+      {
+        "size": "XL",
+        "color": "Alabaster Beige",
+        "stock": 6
+      }
+    ],
+    "material": "100% Double-Mercerized Egyptian Giza Cotton",
+    "careInstructions": "Delicate cold wash, flat dry.",
+    "features": [
+      "Johnny buttonless collar",
+      "Subtle fine knit ribbing",
+      "High-luster silky finish"
+    ],
+    "tags": [
+      "Polo",
+      "Knit Polo",
+      "Luxury Basic",
+      "Summer"
+    ],
+    "isFeatured": true,
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.9,
+    "numReviews": 23,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-020",
+    "title": "LEO Raw Edge Modal Long-Sleeve Tee",
+    "slug": "leo-raw-edge-modal-long-sleeve-tee",
+    "sku": "LEO-TEE-020",
+    "shortDescription": "Featherlight micro-modal blended long sleeve with subtle raw laser-cut hems.",
+    "description": "Incredible softness and fluid drape. Features elongated sleeves that bunch gracefully around the wrists.",
+    "price": 3299,
+    "compareAtPrice": 4199,
+    "category": "cat-006",
+    "categoryName": "T-Shirts & Polos",
+    "categorySlug": "t-shirts-polos",
+    "collectionRef": "col-003",
+    "collectionName": "Minimalist Noir",
+    "collectionSlug": "minimalist-noir",
+    "gender": "Unisex",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Smoke Grey",
+        "hex": "#4A4A4A"
+      },
+      {
+        "name": "Charcoal Black",
+        "hex": "#0A0A0A"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Smoke Grey",
+        "stock": 8
+      },
+      {
+        "size": "M",
+        "color": "Smoke Grey",
+        "stock": 14
+      },
+      {
+        "size": "L",
+        "color": "Smoke Grey",
+        "stock": 12
+      }
+    ],
+    "material": "90% Lenzing Micro-Modal, 10% Elastane",
+    "careInstructions": "Machine wash delicate cold.",
+    "features": [
+      "Laser-cut raw hem",
+      "Extended sleeve length",
+      "Fluid silhouette"
+    ],
+    "tags": [
+      "Long Sleeve",
+      "Modal Tee",
+      "Minimalist"
+    ],
+    "isFeatured": false,
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.7,
+    "numReviews": 10,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-021",
+    "title": "LEO Full-Grain Calfskin Minimalist Tote",
+    "slug": "leo-full-grain-calfskin-minimalist-tote",
+    "sku": "LEO-ACC-021",
+    "shortDescription": "Unstructured full-grain Italian calfskin leather tote with magnetic closure.",
+    "description": "Handcrafted in Florence using vegetable-tanned calfskin. Spacious enough for a 16-inch laptop and daily essentials, lined in plush suede with an interior zipped pouch.",
+    "price": 14999,
+    "compareAtPrice": 18999,
+    "category": "cat-007",
+    "categoryName": "Accessories",
+    "categorySlug": "accessories",
+    "collectionRef": "col-003",
+    "collectionName": "Minimalist Noir",
+    "collectionSlug": "minimalist-noir",
+    "gender": "Unisex",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=95"
+      }
+    ],
+    "sizes": [
+      "One Size"
+    ],
+    "colors": [
+      {
+        "name": "Onyx Black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Cognac Saddle",
+        "hex": "#9E4714"
+      }
+    ],
+    "variants": [
+      {
+        "size": "One Size",
+        "color": "Onyx Black",
+        "stock": 12
+      },
+      {
+        "size": "One Size",
+        "color": "Cognac Saddle",
+        "stock": 8
+      }
+    ],
+    "material": "100% Italian Vegetable-Tanned Calfskin Leather, Suede Lining",
+    "careInstructions": "Condition annually with leather balm.",
+    "features": [
+      "Concealed magnetic snap",
+      "Removable internal zippered clutch",
+      "Reinforced shoulder drop handles"
+    ],
+    "tags": [
+      "Leather Bag",
+      "Tote",
+      "Handmade",
+      "Luxury Accessory"
+    ],
+    "isFeatured": true,
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "inStock": true,
+    "rating": 5,
+    "numReviews": 42,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-022",
+    "title": "LEO Reversible Cashmere Scarf with Fringed Hem",
+    "slug": "leo-reversible-cashmere-scarf-fringed-hem",
+    "sku": "LEO-ACC-022",
+    "shortDescription": "Two-tone 100% Mongolian cashmere woven scarf with hand-twisted tassels.",
+    "description": "Generously proportioned at 200cm x 70cm, this scarf wraps you in featherweight warmth. Woven with dual tonal hues for versatile styling.",
+    "price": 4999,
+    "compareAtPrice": 6499,
+    "category": "cat-007",
+    "categoryName": "Accessories",
+    "categorySlug": "accessories",
+    "collectionRef": "col-005",
+    "collectionName": "Cashmere Atelier",
+    "collectionSlug": "cashmere-atelier",
+    "gender": "Unisex",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "One Size"
+    ],
+    "colors": [
+      {
+        "name": "Charcoal / Camel",
+        "hex": "#3E3E3E"
+      },
+      {
+        "name": "Ivory / Grey",
+        "hex": "#DCDCDC"
+      }
+    ],
+    "variants": [
+      {
+        "size": "One Size",
+        "color": "Charcoal / Camel",
+        "stock": 20
+      },
+      {
+        "size": "One Size",
+        "color": "Ivory / Grey",
+        "stock": 15
+      }
+    ],
+    "material": "100% Grade-A Mongolian Cashmere",
+    "careInstructions": "Dry clean or delicate cold hand wash.",
+    "features": [
+      "Two-tone reversible weave",
+      "Hand-twisted 3-inch fringes",
+      "Oversized wrap dimensions"
+    ],
+    "tags": [
+      "Scarf",
+      "Cashmere Scarf",
+      "Winter Accessory"
+    ],
+    "isFeatured": true,
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.9,
+    "numReviews": 28,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-023",
+    "title": "LEO Polished Brass Buckle Leather Dress Belt",
+    "slug": "leo-polished-brass-buckle-leather-dress-belt",
+    "sku": "LEO-ACC-023",
+    "shortDescription": "30mm vegetable-tanned bridle leather belt with champagne gold solid brass hardware.",
+    "description": "Beveled and burnished by hand. The minimalist buckle has a soft champagne satin finish that complements both gold and silver jewelry.",
+    "price": 2999,
+    "compareAtPrice": 3999,
+    "category": "cat-007",
+    "categoryName": "Accessories",
+    "categorySlug": "accessories",
+    "collectionRef": "col-001",
+    "collectionName": "Autumn / Winter 2026 — Monolith",
+    "collectionSlug": "monolith-aw26",
+    "gender": "Unisex",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "colors": [
+      {
+        "name": "Noir Black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Dark Chestnut",
+        "hex": "#4A2E18"
+      }
+    ],
+    "variants": [
+      {
+        "size": "32",
+        "color": "Noir Black",
+        "stock": 14
+      },
+      {
+        "size": "34",
+        "color": "Noir Black",
+        "stock": 12
+      },
+      {
+        "size": "32",
+        "color": "Dark Chestnut",
+        "stock": 8
+      }
+    ],
+    "material": "100% Full-Grain English Bridle Leather, Solid Brass",
+    "careInstructions": "Wipe with soft damp cloth.",
+    "features": [
+      "Solid brass buckle with satin finish",
+      "Hand-burnished wax edges",
+      "30mm classic width"
+    ],
+    "tags": [
+      "Belt",
+      "Leather Belt",
+      "Accessories"
+    ],
+    "isFeatured": false,
+    "isBestSeller": false,
+    "isNewArrival": false,
+    "inStock": true,
+    "rating": 4.8,
+    "numReviews": 15,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-024",
+    "title": "LEO Double-Breasted Wool Atelier Blazer",
+    "slug": "leo-double-breasted-wool-atelier-blazer",
+    "sku": "LEO-SUIT-024",
+    "shortDescription": "Peak lapel 6x2 double-breasted structured jacket tailored in English hopsack wool.",
+    "description": "A monument to modern tailoring. Features sharp roped shoulders, a cinched waistline, dual side vents, and half-canvas chest construction that conforms to the wearer’s body over time.",
+    "price": 16999,
+    "compareAtPrice": 21999,
+    "category": "cat-008",
+    "categoryName": "Tailored Suits",
+    "categorySlug": "tailored-suits",
+    "collectionRef": "col-001",
+    "collectionName": "Autumn / Winter 2026 — Monolith",
+    "collectionSlug": "monolith-aw26",
+    "gender": "Unisex",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=95"
+      }
+    ],
+    "sizes": [
+      "38R",
+      "40R",
+      "42R",
+      "44R"
+    ],
+    "colors": [
+      {
+        "name": "Obsidian Noir",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Midnight Navy",
+        "hex": "#0F1A2C"
+      }
+    ],
+    "variants": [
+      {
+        "size": "38R",
+        "color": "Obsidian Noir",
+        "stock": 6
+      },
+      {
+        "size": "40R",
+        "color": "Obsidian Noir",
+        "stock": 12
+      },
+      {
+        "size": "42R",
+        "color": "Obsidian Noir",
+        "stock": 10
+      },
+      {
+        "size": "44R",
+        "color": "Obsidian Noir",
+        "stock": 4
+      }
+    ],
+    "material": "100% Super 150s English Worsted Wool, Cupro Silk Lining",
+    "careInstructions": "Specialist dry clean only. Steam gently.",
+    "features": [
+      "Half-canvas horsehair interlining",
+      "Real horn 6x2 buttons",
+      "Functional 4-button cuffs",
+      "Broad peak lapels"
+    ],
+    "tags": [
+      "Blazer",
+      "Suit Jacket",
+      "Double Breasted",
+      "Formal"
+    ],
+    "isFeatured": true,
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 5,
+    "numReviews": 22,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.988Z",
+    "updatedAt": "2026-09-24T12:43:09.988Z"
+  },
+  {
+    "_id": "prod-025",
+    "title": "LEO Unstructured Relaxed Linen Blazer",
+    "slug": "leo-unstructured-relaxed-linen-blazer",
+    "sku": "LEO-SUIT-025",
+    "shortDescription": "Unlined single-breasted two-button blazer in breathable Irish linen.",
+    "description": "Effortless summer sophistication. Unconstructed shoulders and zero lining allow absolute airflow, delivering sharp looks without feeling restrictive.",
+    "price": 11999,
+    "compareAtPrice": 14999,
+    "category": "cat-008",
+    "categoryName": "Tailored Suits",
+    "categorySlug": "tailored-suits",
+    "collectionRef": "col-002",
+    "collectionName": "Spring / Summer 2026 — Aura",
+    "collectionSlug": "aura-ss26",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "38R",
+      "40R",
+      "42R"
+    ],
+    "colors": [
+      {
+        "name": "Ecru Sand",
+        "hex": "#D6CEBE"
+      },
+      {
+        "name": "Sage Green",
+        "hex": "#778877"
+      }
+    ],
+    "variants": [
+      {
+        "size": "38R",
+        "color": "Ecru Sand",
+        "stock": 7
+      },
+      {
+        "size": "40R",
+        "color": "Ecru Sand",
+        "stock": 11
+      },
+      {
+        "size": "42R",
+        "color": "Ecru Sand",
+        "stock": 9
+      }
+    ],
+    "material": "100% Irish Heavy-Woven Flax Linen",
+    "careInstructions": "Dry clean only.",
+    "features": [
+      "Completely unlined for maximum breathability",
+      "Patch pockets",
+      "Mother of pearl buttons"
+    ],
+    "tags": [
+      "Linen Blazer",
+      "Summer Suit",
+      "Unstructured"
+    ],
+    "isFeatured": false,
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.8,
+    "numReviews": 13,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.989Z",
+    "updatedAt": "2026-09-24T12:43:09.989Z"
+  },
+  {
+    "_id": "prod-026",
+    "title": "LEO Tailored Single-Breasted Tuxedo Jacket",
+    "slug": "leo-tailored-single-breasted-tuxedo-jacket",
+    "sku": "LEO-SUIT-026",
+    "shortDescription": "Shawl collar evening dinner jacket trimmed in midnight silk satin.",
+    "description": "Impeccably tailored for galas and black-tie affairs. Features silk satin covered buttons, jetted pockets, and high-twist wool that resists creasing all evening.",
+    "price": 19999,
+    "compareAtPrice": 24999,
+    "category": "cat-008",
+    "categoryName": "Tailored Suits",
+    "categorySlug": "tailored-suits",
+    "collectionRef": "col-003",
+    "collectionName": "Minimalist Noir",
+    "collectionSlug": "minimalist-noir",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "38R",
+      "40R",
+      "42R",
+      "44R"
+    ],
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#0A0A0A"
+      }
+    ],
+    "variants": [
+      {
+        "size": "38R",
+        "color": "Midnight Black",
+        "stock": 5
+      },
+      {
+        "size": "40R",
+        "color": "Midnight Black",
+        "stock": 10
+      },
+      {
+        "size": "42R",
+        "color": "Midnight Black",
+        "stock": 8
+      }
+    ],
+    "material": "100% Barathea Wool, Silk Satin Trim",
+    "careInstructions": "Specialist evening wear dry clean.",
+    "features": [
+      "Silk satin shawl collar",
+      "Single satin-covered button",
+      "Interior cigar and ticket pockets"
+    ],
+    "tags": [
+      "Tuxedo",
+      "Dinner Jacket",
+      "Black Tie"
+    ],
+    "isFeatured": true,
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 5,
+    "numReviews": 18,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.989Z",
+    "updatedAt": "2026-09-24T12:43:09.989Z"
+  },
+  {
+    "_id": "prod-027",
+    "title": "LEO Cashmere Travel Cloak & Shawl Scarf",
+    "slug": "leo-cashmere-travel-cloak-shawl-scarf",
+    "sku": "LEO-KNIT-027",
+    "shortDescription": "Substantial 4-ply cashmere draped mantle scarf with hand-fringed edges.",
+    "description": "An architectural outerwear layer for the international gentleman. Crafted in plush wool-cashmere with ribbed edge trims and subtle crest embroidery.",
+    "price": 8999,
+    "compareAtPrice": 11999,
+    "category": "cat-004",
+    "categoryName": "Knitwear",
+    "categorySlug": "knitwear",
+    "collectionRef": "col-005",
+    "collectionName": "Cashmere Atelier",
+    "collectionSlug": "cashmere-atelier",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "One Size"
+    ],
+    "colors": [
+      {
+        "name": "Anthracite Grey",
+        "hex": "#292929"
+      }
+    ],
+    "variants": [
+      {
+        "size": "One Size",
+        "color": "Anthracite Grey",
+        "stock": 14
+      }
+    ],
+    "material": "70% Wool, 30% Cashmere",
+    "careInstructions": "Dry clean only.",
+    "features": [
+      "Generous dimensions",
+      "Side slit drape",
+      "Hand-finished hem"
+    ],
+    "tags": [
+      "Mantle",
+      "Cape",
+      "Cashmere",
+      "Gentleman"
+    ],
+    "isFeatured": false,
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.8,
+    "numReviews": 9,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.989Z",
+    "updatedAt": "2026-09-24T12:43:09.989Z"
+  },
+  {
+    "_id": "prod-028",
+    "title": "LEO Tailored Pleated Bermuda Shorts",
+    "slug": "leo-tailored-pleated-bermuda-shorts",
+    "sku": "LEO-TRSR-028",
+    "shortDescription": "High-rise knee-length tailored shorts in crisp structured cotton twill.",
+    "description": "Sharp sartorial shorts featuring deep front pleats, cuffed hems, and side slant pockets.",
+    "price": 4499,
+    "compareAtPrice": 5499,
+    "category": "cat-003",
+    "categoryName": "Trousers",
+    "categorySlug": "trousers",
+    "collectionRef": "col-002",
+    "collectionName": "Spring / Summer 2026 — Aura",
+    "collectionSlug": "aura-ss26",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      {
+        "name": "Stone Beige",
+        "hex": "#E2DBD2"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Stone Beige",
+        "stock": 10
+      },
+      {
+        "size": "M",
+        "color": "Stone Beige",
+        "stock": 15
+      },
+      {
+        "size": "L",
+        "color": "Stone Beige",
+        "stock": 8
+      }
+    ],
+    "material": "100% Organic Heavy Cotton Twill",
+    "careInstructions": "Machine wash cold.",
+    "features": [
+      "Pleated front",
+      "Turned-up cuffs",
+      "Slanted pockets"
+    ],
+    "tags": [
+      "Shorts",
+      "Bermuda",
+      "Summer Tailoring"
+    ],
+    "isFeatured": false,
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.7,
+    "numReviews": 7,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.989Z",
+    "updatedAt": "2026-09-24T12:43:09.989Z"
+  },
+  {
+    "_id": "prod-029",
+    "title": "LEO Tailored Silk Habotai Band-Collar Shirt",
+    "slug": "leo-tailored-silk-habotai-band-collar-shirt",
+    "sku": "LEO-SHRT-029",
+    "shortDescription": "Lustrous lightweight pure silk evening shirt with band collar and concealed placket.",
+    "description": "Understated elegance for black-tie gatherings. Cut from 100% pure silk Habotai with clean French cuffs, mother-of-pearl stud closures, and an elongated rounded hem.",
+    "price": 7999,
+    "compareAtPrice": 9999,
+    "category": "cat-002",
+    "categoryName": "Tailored Shirts",
+    "categorySlug": "tailored-shirts",
+    "collectionRef": "col-004",
+    "collectionName": "The Silk Edit",
+    "collectionSlug": "the-silk-edit",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Smoky Obsidian",
+        "hex": "#1C1C1C"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "Smoky Obsidian",
+        "stock": 5
+      },
+      {
+        "size": "M",
+        "color": "Smoky Obsidian",
+        "stock": 9
+      },
+      {
+        "size": "L",
+        "color": "Smoky Obsidian",
+        "stock": 7
+      },
+      {
+        "size": "XL",
+        "color": "Smoky Obsidian",
+        "stock": 4
+      }
+    ],
+    "material": "100% Pure Silk Habotai",
+    "careInstructions": "Gentle dry clean only.",
+    "features": [
+      "Band mandarin collar",
+      "French seams",
+      "Concealed mother-of-pearl placket"
+    ],
+    "tags": [
+      "Silk Shirt",
+      "Evening Shirt",
+      "Habotai"
+    ],
+    "isFeatured": false,
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.9,
+    "numReviews": 12,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.989Z",
+    "updatedAt": "2026-09-24T12:43:09.989Z"
+  },
+  {
+    "_id": "prod-030",
+    "title": "LEO Raw Japanese Denim Wide-Leg Jean",
+    "slug": "leo-raw-japanese-denim-wide-leg-jean",
+    "sku": "LEO-TRSR-030",
+    "shortDescription": "14.5oz unsanforized Japanese selvedge denim in deep indigo with silver hardware.",
+    "description": "Crafted on vintage shuttle looms in Okayama. Pure indigo dyed, designed to mold to your body and fade uniquely with each wear.",
+    "price": 8499,
+    "compareAtPrice": 10999,
+    "category": "cat-003",
+    "categoryName": "Trousers",
+    "categorySlug": "trousers",
+    "collectionRef": "col-001",
+    "collectionName": "Autumn / Winter 2026 — Monolith",
+    "collectionSlug": "monolith-aw26",
+    "gender": "Unisex",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "colors": [
+      {
+        "name": "Deep Indigo",
+        "hex": "#1A2A44"
+      }
+    ],
+    "variants": [
+      {
+        "size": "30",
+        "color": "Deep Indigo",
+        "stock": 12
+      },
+      {
+        "size": "32",
+        "color": "Deep Indigo",
+        "stock": 20
+      },
+      {
+        "size": "34",
+        "color": "Deep Indigo",
+        "stock": 15
+      }
+    ],
+    "material": "100% Okayama Selvedge Cotton Denim (14.5 oz)",
+    "careInstructions": "Wash inside out in cold water after 6 months of wear.",
+    "features": [
+      "Pink selvedge ID line",
+      "Custom engraved silver rivets",
+      "Hidden back pocket rivets"
+    ],
+    "tags": [
+      "Selvedge Denim",
+      "Japanese Denim",
+      "Raw Jeans"
+    ],
+    "isFeatured": true,
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "inStock": true,
+    "rating": 4.9,
+    "numReviews": 33,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.989Z",
+    "updatedAt": "2026-09-24T12:43:09.989Z"
+  },
+  {
+    "_id": "prod-031",
+    "title": "LEO Handwoven Panama Straw Fedora",
+    "slug": "leo-handwoven-panama-straw-fedora",
+    "sku": "LEO-ACC-031",
+    "shortDescription": "Grade 8 Ecuadorian Toquilla straw fedora with grossgrain ribbon trim.",
+    "description": "Handwoven in Montecristi, Ecuador. Featherlight, breathable, and finished with a black grosgrain ribbon with gold metallic branding.",
+    "price": 5499,
+    "compareAtPrice": 6999,
+    "category": "cat-007",
+    "categoryName": "Accessories",
+    "categorySlug": "accessories",
+    "collectionRef": "col-002",
+    "collectionName": "Spring / Summer 2026 — Aura",
+    "collectionSlug": "aura-ss26",
+    "gender": "Unisex",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1509319117193-57bab727e09d?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "S/M",
+      "L/XL"
+    ],
+    "colors": [
+      {
+        "name": "Natural Straw",
+        "hex": "#EBE0C8"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S/M",
+        "color": "Natural Straw",
+        "stock": 10
+      },
+      {
+        "size": "L/XL",
+        "color": "Natural Straw",
+        "stock": 12
+      }
+    ],
+    "material": "100% Genuine Ecuadorian Toquilla Palm Straw",
+    "careInstructions": "Spot clean only. Store in hat box.",
+    "features": [
+      "Grade 8 handweave",
+      "Breathable cotton sweatband",
+      "UV protective"
+    ],
+    "tags": [
+      "Hat",
+      "Panama Hat",
+      "Summer Straw"
+    ],
+    "isFeatured": false,
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "inStock": true,
+    "rating": 4.8,
+    "numReviews": 14,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.989Z",
+    "updatedAt": "2026-09-24T12:43:09.989Z"
+  },
+  {
+    "_id": "prod-032",
+    "title": "LEO Cashmere Knit Beanie",
+    "slug": "leo-cashmere-knit-beanie",
+    "sku": "LEO-ACC-032",
+    "shortDescription": "100% ribbed cashmere watch cap beanie with adjustable fold-over cuff.",
+    "description": "Snug, supremely soft, and lightweight. Delivers gentle warmth without itchiness.",
+    "price": 2499,
+    "compareAtPrice": 3299,
+    "category": "cat-007",
+    "categoryName": "Accessories",
+    "categorySlug": "accessories",
+    "collectionRef": "col-005",
+    "collectionName": "Cashmere Atelier",
+    "collectionSlug": "cashmere-atelier",
+    "gender": "Unisex",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=1600&q=95",
+        "isDefault": true
+      }
+    ],
+    "sizes": [
+      "One Size"
+    ],
+    "colors": [
+      {
+        "name": "Obsidian Black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#9E9E9E"
+      },
+      {
+        "name": "Camel Tan",
+        "hex": "#C19A6B"
+      }
+    ],
+    "variants": [
+      {
+        "size": "One Size",
+        "color": "Obsidian Black",
+        "stock": 25
+      },
+      {
+        "size": "One Size",
+        "color": "Heather Grey",
+        "stock": 18
+      }
+    ],
+    "material": "100% Mongolian Cashmere",
+    "careInstructions": "Hand wash cold, dry flat.",
+    "features": [
+      "2x2 stretch rib knit",
+      "Adjustable turn-up cuff",
+      "Zero scratch"
+    ],
+    "tags": [
+      "Beanie",
+      "Cashmere Hat",
+      "Winter Essentials"
+    ],
+    "isFeatured": false,
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "inStock": true,
+    "rating": 4.9,
+    "numReviews": 39,
+    "isPublished": true,
+    "createdAt": "2026-09-24T12:43:09.989Z",
+    "updatedAt": "2026-09-24T12:43:09.989Z"
+  }
+]

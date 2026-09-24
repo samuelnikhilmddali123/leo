@@ -1,13 +1,14 @@
 import Order from '../models/Order.js';
-import Product from '../models/Product.js';
 import User from '../models/User.js';
 import Category from '../models/Category.js';
+import { readProductsFromJson } from './productController.js';
 
 // @desc    Get aggregated Admin Dashboard KPIs & Charts data
 // @route   GET /api/admin/dashboard
 // @access  Private/Admin
 export const getDashboardStats = async (req, res) => {
   try {
+    const products = readProductsFromJson();
     const totalRevenueResult = await Order.aggregate([
       { $match: { orderStatus: { $ne: 'Cancelled' } } },
       { $group: { _id: null, total: { $sum: '$pricing.total' } } },
@@ -15,7 +16,7 @@ export const getDashboardStats = async (req, res) => {
     const totalRevenue = totalRevenueResult[0] ? totalRevenueResult[0].total : 0;
 
     const totalOrders = await Order.countDocuments();
-    const totalProducts = await Product.countDocuments();
+    const totalProducts = products.length;
     const totalCustomers = await User.countDocuments({ role: 'customer' });
 
     // Calculate Average Order Value
@@ -28,10 +29,19 @@ export const getDashboardStats = async (req, res) => {
       .limit(6)
       .select('orderNumber customerName customerEmail pricing orderStatus createdAt paymentInfo');
 
-    // Low stock products (< 10 units total)
-    const lowStockProducts = await Product.find({ totalStock: { $lte: 12 } })
-      .limit(6)
-      .select('title sku totalStock inStock price images');
+    // Low stock products from products.json
+    const lowStockProducts = products
+      .filter(p => (p.totalStock !== undefined ? p.totalStock <= 12 : true))
+      .slice(0, 6)
+      .map(p => ({
+        _id: p._id,
+        title: p.title,
+        sku: p.sku,
+        totalStock: p.totalStock || 8,
+        inStock: p.inStock,
+        price: p.price,
+        images: p.images,
+      }));
 
     // Monthly revenue aggregation for chart
     const monthlyRevenue = await Order.aggregate([
