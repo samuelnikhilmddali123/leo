@@ -128,9 +128,9 @@ app.get('/api/health', (req, res) => {
 app.use(notFound);
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 5001;
+const isDirectRun = process.argv && process.argv[1] && (process.argv[1].endsWith('server.js') || process.argv[1].endsWith('server'));
 
-if (!process.env.VERCEL) {
+if (isDirectRun && !process.env.VERCEL) {
   app.listen(PORT, () => {
     console.log(`[LEO SERVER] Atelier API server running on port ${PORT} in ${process.env.NODE_ENV || 'development'} mode`);
   });

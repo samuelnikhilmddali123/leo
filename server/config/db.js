@@ -33,9 +33,9 @@ export const connectDB = async () => {
     }
   }
 
-  // If in serverless (e.g. Vercel) and no MONGODB_URI provided
-  if (process.env.VERCEL) {
-    console.warn('[LEO DB] Running on Vercel without MONGODB_URI configured. Set MONGODB_URI in Vercel Environment Variables.');
+  // If in serverless (e.g. Vercel / Lambda) or production without MONGODB_URI
+  if (process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME || process.env.NODE_ENV === 'production') {
+    console.warn('[LEO DB] Running in production/serverless without MONGODB_URI configured. Please set MONGODB_URI in project environment variables.');
     return null;
   }
 

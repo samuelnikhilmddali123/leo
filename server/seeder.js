@@ -1785,7 +1785,7 @@ export const seedDatabase = async () => {
   }
 };
 
-if (process.argv[1].endsWith('seeder.js')) {
+if (process.argv && process.argv[1] && process.argv[1].endsWith('seeder.js')) {
   seedDatabase().then(() => {
     mongoose.connection.close();
     process.exit(0);
