@@ -1,26 +1,52 @@
 import Collection from '../models/Collection.js';
 import Product from '../models/Product.js';
+import mongoose from 'mongoose';
+import { fallbackCollections, fallbackProducts } from '../data/fallbackData.js';
 
 const slugify = (text) => text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
 
 export const getCollections = async (req, res) => {
   try {
+    if (mongoose.connection.readyState !== 1) {
+      return res.json({ success: true, data: fallbackCollections });
+    }
     const collections = await Collection.find({ isActive: true });
+    if (!collections || collections.length === 0) {
+      return res.json({ success: true, data: fallbackCollections });
+    }
     res.json({ success: true, data: collections });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    console.warn('[COLLECTION API] Using fallback collections:', error.message);
+    res.json({ success: true, data: fallbackCollections });
   }
 };
 
 export const getCollectionBySlug = async (req, res) => {
   try {
-    const collection = await Collection.findOne({ slug: req.params.slug.toLowerCase() });
+    const slug = req.params.slug.toLowerCase();
+    if (mongoose.connection.readyState !== 1) {
+      const collection = fallbackCollections.find(c => c.slug === slug);
+      if (!collection) return res.status(404).json({ success: false, message: 'Collection not found' });
+      const products = fallbackProducts.filter(p => p.collectionSlug === slug);
+      return res.json({ success: true, data: collection, products });
+    }
+    const collection = await Collection.findOne({ slug });
     if (!collection) {
+      const fallbackCol = fallbackCollections.find(c => c.slug === slug);
+      if (fallbackCol) {
+        const products = fallbackProducts.filter(p => p.collectionSlug === slug);
+        return res.json({ success: true, data: fallbackCol, products });
+      }
       return res.status(404).json({ success: false, message: 'Collection not found' });
     }
     const products = await Product.find({ collectionRef: collection._id, isPublished: true });
     res.json({ success: true, data: collection, products });
   } catch (error) {
+    const fallbackCol = fallbackCollections.find(c => c.slug === req.params.slug.toLowerCase());
+    if (fallbackCol) {
+      const products = fallbackProducts.filter(p => p.collectionSlug === req.params.slug.toLowerCase());
+      return res.json({ success: true, data: fallbackCol, products });
+    }
     res.status(500).json({ success: false, message: error.message });
   }
 };

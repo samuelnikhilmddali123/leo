@@ -1,6 +1,36 @@
 import Product from '../models/Product.js';
 import Category from '../models/Category.js';
 import Collection from '../models/Collection.js';
+import mongoose from 'mongoose';
+import { fallbackProducts } from '../data/fallbackData.js';
+
+// Helper to filter fallback products in memory
+const filterFallbackProducts = (query) => {
+  let list = [...fallbackProducts];
+  if (query.keyword) {
+    const kw = query.keyword.toLowerCase();
+    list = list.filter(p => p.title.toLowerCase().includes(kw) || p.description.toLowerCase().includes(kw));
+  }
+  if (query.category) {
+    list = list.filter(p => p.categorySlug === query.category.toLowerCase() || p.categoryName?.toLowerCase() === query.category.toLowerCase());
+  }
+  if (query.collection) {
+    list = list.filter(p => p.collectionSlug === query.collection.toLowerCase());
+  }
+  if (query.gender && query.gender !== 'All') {
+    list = list.filter(p => p.gender === query.gender || p.gender === 'Unisex');
+  }
+  if (query.isFeatured === 'true') {
+    list = list.filter(p => p.isFeatured);
+  }
+  if (query.isBestSeller === 'true') {
+    list = list.filter(p => p.isBestSeller);
+  }
+  if (query.isNewArrival === 'true') {
+    list = list.filter(p => p.isNewArrival);
+  }
+  return list;
+};
 
 // Helper to slugify
 const slugify = (text) => {
@@ -18,6 +48,14 @@ const slugify = (text) => {
 // @access  Public
 export const getProducts = async (req, res) => {
   try {
+    if (mongoose.connection.readyState !== 1) {
+      const data = filterFallbackProducts(req.query);
+      return res.json({
+        success: true,
+        data,
+        pagination: { page: 1, limit: data.length, totalPages: 1, totalItems: data.length }
+      });
+    }
     const {
       keyword,
       category,
@@ -126,16 +164,22 @@ export const getProducts = async (req, res) => {
 
     res.json({
       success: true,
-      data: products,
+      data: products && products.length > 0 ? products : filterFallbackProducts(req.query),
       pagination: {
         page: pageNum,
         limit: limitNum,
-        totalPages: Math.ceil(total / limitNum),
-        totalItems: total,
+        totalPages: Math.ceil(total / limitNum) || 1,
+        totalItems: total || fallbackProducts.length,
       },
     });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    console.warn('[PRODUCT API] Using fallback products:', error.message);
+    const data = filterFallbackProducts(req.query);
+    res.json({
+      success: true,
+      data,
+      pagination: { page: 1, limit: data.length, totalPages: 1, totalItems: data.length }
+    });
   }
 };
 
@@ -147,12 +191,20 @@ export const getProductBySlug = async (req, res) => {
     const { slugOrId } = req.params;
     const isId = slugOrId.match(/^[0-9a-fA-F]{24}$/);
 
+    if (mongoose.connection.readyState !== 1) {
+      const fallback = fallbackProducts.find(p => p.slug === slugOrId.toLowerCase() || p._id === slugOrId);
+      if (!fallback) return res.status(404).json({ success: false, message: 'Product not found' });
+      return res.json({ success: true, data: fallback });
+    }
+
     const query = isId ? { _id: slugOrId } : { slug: slugOrId.toLowerCase() };
     const product = await Product.findOne(query)
       .populate('category', 'name slug bannerImage')
       .populate('collectionRef', 'name slug tagline heroImage');
 
     if (!product) {
+      const fallback = fallbackProducts.find(p => p.slug === slugOrId.toLowerCase() || p._id === slugOrId);
+      if (fallback) return res.json({ success: true, data: fallback });
       return res.status(404).json({ success: false, message: 'Product not found' });
     }
 
@@ -161,6 +213,8 @@ export const getProductBySlug = async (req, res) => {
       data: product,
     });
   } catch (error) {
+    const fallback = fallbackProducts.find(p => p.slug === req.params.slugOrId?.toLowerCase() || p._id === req.params.slugOrId);
+    if (fallback) return res.json({ success: true, data: fallback });
     res.status(500).json({ success: false, message: error.message });
   }
 };

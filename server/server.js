@@ -22,24 +22,45 @@ import uploadRoutes from './routes/uploadRoutes.js';
 import Category from './models/Category.js';
 import { seedDatabase } from './seeder.js';
 
+import mongoose from 'mongoose';
+
 dotenv.config();
 
-// Connect to MongoDB (with in-memory fallback)
-await connectDB();
-
-// Auto-seed database if empty
-try {
-  const categoryCount = await Category.countDocuments();
-  if (categoryCount === 0) {
-    console.log('[LEO SERVER] Database is empty. Seeding initial catalog data...');
-    await seedDatabase();
-    console.log('[LEO SERVER] Initial catalog data seeded successfully.');
-  }
-} catch (seedErr) {
-  console.error('[LEO SERVER] Auto-seeding check failed:', seedErr.message);
-}
-
 const app = express();
+
+// Middleware to ensure DB connection on serverless/local
+app.use(async (req, res, next) => {
+  try {
+    if (mongoose.connection.readyState !== 1) {
+      await connectDB();
+    }
+    next();
+  } catch (err) {
+    console.error('[LEO DB] Request DB connection error:', err.message);
+    next();
+  }
+});
+
+// Non-blocking initialization for local development
+const initServer = async () => {
+  try {
+    await connectDB();
+    if (mongoose.connection.readyState === 1) {
+      const categoryCount = await Category.countDocuments();
+      if (categoryCount === 0) {
+        console.log('[LEO SERVER] Database is empty. Seeding initial catalog data...');
+        await seedDatabase();
+        console.log('[LEO SERVER] Initial catalog data seeded successfully.');
+      }
+    }
+  } catch (seedErr) {
+    console.warn('[LEO SERVER] Auto-seeding check warning:', seedErr.message);
+  }
+};
+
+if (!process.env.VERCEL) {
+  initServer();
+}
 
 // Body Parser Middleware
 app.use(express.json({ limit: '10mb' }));

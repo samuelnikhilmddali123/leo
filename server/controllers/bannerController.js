@@ -1,11 +1,17 @@
 import Banner from '../models/Banner.js';
+import mongoose from 'mongoose';
+import { fallbackBanners } from '../data/fallbackData.js';
 
 export const getBanners = async (req, res) => {
   try {
+    if (mongoose.connection.readyState !== 1) {
+      return res.json({ success: true, data: fallbackBanners });
+    }
     const banners = await Banner.find({ isActive: true }).sort({ order: 1 });
-    res.json({ success: true, data: banners });
+    res.json({ success: true, data: banners && banners.length > 0 ? banners : fallbackBanners });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    console.warn('[BANNER API] Using fallback banners:', error.message);
+    res.json({ success: true, data: fallbackBanners });
   }
 };
 
