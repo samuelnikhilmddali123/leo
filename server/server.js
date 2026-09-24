@@ -101,28 +101,31 @@ try {
 }
 
 // API Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/products', productRoutes);
-app.use('/api/categories', categoryRoutes);
-app.use('/api/collections', collectionRoutes);
-app.use('/api/orders', orderRoutes);
-app.use('/api/payment', paymentRoutes);
-app.use('/api/coupons', couponRoutes);
-app.use('/api/reviews', reviewRoutes);
-app.use('/api/banners', bannerRoutes);
-app.use('/api/admin', adminRoutes);
-app.use('/api/upload', uploadRoutes);
-
-// Health Check
-app.get('/api/health', (req, res) => {
-  res.status(200).json({
-    status: 'ok',
-    timestamp: new Date().toISOString(),
-    brand: 'LEO Atelier',
-    version: '1.0.0',
-    mode: process.env.NODE_ENV || 'development',
+const registerRoutes = (prefix) => {
+  app.use(`${prefix}/auth`, authRoutes);
+  app.use(`${prefix}/products`, productRoutes);
+  app.use(`${prefix}/categories`, categoryRoutes);
+  app.use(`${prefix}/collections`, collectionRoutes);
+  app.use(`${prefix}/orders`, orderRoutes);
+  app.use(`${prefix}/payment`, paymentRoutes);
+  app.use(`${prefix}/coupons`, couponRoutes);
+  app.use(`${prefix}/reviews`, reviewRoutes);
+  app.use(`${prefix}/banners`, bannerRoutes);
+  app.use(`${prefix}/admin`, adminRoutes);
+  app.use(`${prefix}/upload`, uploadRoutes);
+  app.get(`${prefix}/health`, (req, res) => {
+    res.status(200).json({
+      status: 'ok',
+      timestamp: new Date().toISOString(),
+      brand: 'LEO Atelier',
+      version: '1.0.0',
+      mode: process.env.NODE_ENV || 'development',
+    });
   });
-});
+};
+
+registerRoutes('/api');
+registerRoutes('');
 
 // Error Handling Middleware
 app.use(notFound);
